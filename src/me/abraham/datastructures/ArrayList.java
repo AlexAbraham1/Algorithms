@@ -8,16 +8,15 @@ package me.abraham.datastructures;
  * @version 12.14.2014
  */
 
-public class ArrayList<T extends Comparable<T>> {
+public class ArrayList<T> {
 	
-	@SuppressWarnings("rawtypes")
-	private Comparable[] array;
+	private Object[] array;
 	
 	private int size;
 	
-	public <T extends Comparable> ArrayList()
+	public ArrayList()
 	{
-		array = new Comparable[2];
+		array = new Object[2];
 		size = 0;
 	}
 	
@@ -99,11 +98,10 @@ public class ArrayList<T extends Comparable<T>> {
 		return size;
 	}
 	
-	@SuppressWarnings("rawtypes")
 	private void expandArray()
 	{
 		int newSize = (int) ((float) 1.5*array.length);
-		Comparable[] temp = new Comparable[newSize];
+		Object[] temp = new Comparable[newSize];
 		
 		for (int i = 0; i < array.length; i++) {
 			temp[i] = array[i];

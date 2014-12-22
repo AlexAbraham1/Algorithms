@@ -31,32 +31,30 @@ public class QuickSort {
 			swap(array, high, temp);
 			
 			//Sort Array
-			if (low < high) {
+			
 				
-				int wall = low-1;
-				int pivot = high;
-				int currentIndex = low;
-				
-				int pivotElement = array[pivot];
-				
-				while (currentIndex < pivot) {
-					if (array[currentIndex] < pivotElement) {
-						wall++;
-						swap(array, wall, currentIndex);
-					}
-					currentIndex++;
+			int wall = low-1;
+			int pivot = high;
+			int currentIndex = low;
+			
+			int pivotElement = array[pivot];
+			
+			while (currentIndex < pivot) {
+				if (array[currentIndex] < pivotElement) {
+					wall++;
+					swap(array, wall, currentIndex);
 				}
-				
-				//At this point everything up to the wall is < pivot
-				//and everything after the wall is => pivot
-				wall++;
-				swap(array, wall, pivot);
-				
-				//call sort before pivot and after pivot
-				sort(array, low, wall-1);
-				sort(array, wall+1, high);
+				currentIndex++;
 			}
 			
+			//At this point everything up to the wall is < pivot
+			//and everything after the wall is => pivot
+			wall++;
+			swap(array, wall, pivot);
+			
+			//call sort before pivot and after pivot
+			sort(array, low, wall-1);
+			sort(array, wall+1, high);
 			
 		}
 	}

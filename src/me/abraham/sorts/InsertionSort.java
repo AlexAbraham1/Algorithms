@@ -93,11 +93,10 @@ public class InsertionSort {
 		}		
 	}
 	
-	@SuppressWarnings("rawtypes")
-	public static void sort(LinkedList list) 
+	public static <T extends Comparable<T>> void sort(LinkedList<T> list) 
 	{	
 		for (int i = 1; i < list.size(); i++) {
-			Comparable value = list.get(i);
+			T value = list.get(i);
 			int j = i-1;
 			while (j >= 0 && list.get(j).compareTo(value) > 0) {
 				list.set(j+1, list.get(j));

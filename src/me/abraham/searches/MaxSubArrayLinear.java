@@ -2,7 +2,7 @@ package me.abraham.searches;
 
 /**
  * Class MaxSubArrayLinear - Given an array it will return an array {sum, lowerIndex, upperIndex} indicated
- * the maximum subarray
+ * the maximum subarray in O(n) time
  *
  * @author Alex Abraham
  *
@@ -11,7 +11,7 @@ package me.abraham.searches;
 
 public class MaxSubArrayLinear {
 	
-	public static Object[] getIndecies(int[] array)
+	public static Object[] getValues(int[] array)
 	{
 		//Initialize Containers
 		IntContainer maxCurrent = new IntContainer(array);
@@ -42,7 +42,7 @@ public class MaxSubArrayLinear {
 		return result;
 	}
 	
-	public static Object[] getIndecies(float[] array)
+	public static Object[] getValues(float[] array)
 	{
 		//Initialize Containers
 		FloatContainer maxCurrent = new FloatContainer(array);
@@ -73,7 +73,7 @@ public class MaxSubArrayLinear {
 		return result;
 	}
 	
-	public static Object[] getIndecies(long[] array)
+	public static Object[] getValues(long[] array)
 	{
 		//Initialize Containers
 		LongContainer maxCurrent = new LongContainer(array);
@@ -104,7 +104,7 @@ public class MaxSubArrayLinear {
 		return result;
 	}
 	
-	public static Object[] getIndecies(double[] array)
+	public static Object[] getValues(double[] array)
 	{
 		//Initialize Containers
 		DoubleContainer maxCurrent = new DoubleContainer(array);

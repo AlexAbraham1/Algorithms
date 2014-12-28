@@ -165,7 +165,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 		
 		while (node != nil) {
 			parent = node;
-			if (node.compareTo(newNode) <= 0) node = node.left;
+			if (newNode.compareTo(node) <= 0) node = node.left;
 			else node = node.right;
 		}
 		

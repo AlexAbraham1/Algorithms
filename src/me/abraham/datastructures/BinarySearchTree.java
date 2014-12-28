@@ -137,7 +137,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 	
 	public Node predecessor(Node node)
 	{
-		if (node.left != nil) return treeMinimum(node.left);
+		if (node.left != nil) return treeMaximum(node.left);
 		
 		else {
 			Node parent = node.parent;
